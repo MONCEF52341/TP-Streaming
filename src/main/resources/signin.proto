@@ -1,0 +1,12 @@
+syntax ="proto3";
+option java_package = "emsi.moncef";
+service Salutation{
+  rpc login(stream NomRequest) returns (NomResponse);
+}
+
+message NomRequest{
+  string nom=1;
+}
+message NomResponse{
+  string msgResponse=1;
+}
