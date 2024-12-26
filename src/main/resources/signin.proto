@@ -8,6 +8,15 @@ service Multiplication{
   rpc getTableMultiplication(NombreRequest) returns (stream TableResponse);
 }
 
+service Suffle{
+  rpc ShuffleWords(stream NamesRequest) returns (stream NamesResponse);
+}
+message NamesRequest{
+  string nom=1;
+}
+message NamesResponse{
+  string msgResponse=1;
+}
 message NomRequest{
   string nom=1;
 }

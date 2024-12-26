@@ -5,6 +5,16 @@ package emsi.moncef.stub;
 
 public final class Signin {
     private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_NamesRequest_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_NamesRequest_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor
+            internal_static_NamesResponse_descriptor;
+    private static final
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internal_static_NamesResponse_fieldAccessorTable;
+    private static final com.google.protobuf.Descriptors.Descriptor
             internal_static_NomRequest_descriptor;
     private static final
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -29,14 +39,18 @@ public final class Signin {
 
     static {
         java.lang.String[] descriptorData = {
-                "\n\014signin.proto\"\031\n\nNomRequest\022\013\n\003nom\030\001 \001(" +
-                        "\t\"\"\n\013NomResponse\022\023\n\013msgResponse\030\001 \001(\t\"/\n" +
-                        "\rNombreRequest\022\016\n\006nombre\030\001 \001(\005\022\016\n\006limite" +
-                        "\030\002 \001(\005\"!\n\rTableResponse\022\020\n\010Resultat\030\001 \001(" +
-                        "\t22\n\nSalutation\022$\n\005login\022\013.NomRequest\032\014." +
-                        "NomResponse(\0012L\n\016Multiplication\022:\n\026getTa" +
-                        "bleMultiplication\022\016.NombreRequest\032\016.Tabl" +
-                        "eResponse0\001B\022\n\020emsi.moncef.stubb\006proto3"
+                "\n\014signin.proto\"\033\n\014NamesRequest\022\013\n\003nom\030\001 " +
+                        "\001(\t\"$\n\rNamesResponse\022\023\n\013msgResponse\030\001 \001(" +
+                        "\t\"\031\n\nNomRequest\022\013\n\003nom\030\001 \001(\t\"\"\n\013NomRespo" +
+                        "nse\022\023\n\013msgResponse\030\001 \001(\t\"/\n\rNombreReques" +
+                        "t\022\016\n\006nombre\030\001 \001(\005\022\016\n\006limite\030\002 \001(\005\"!\n\rTab" +
+                        "leResponse\022\020\n\010Resultat\030\001 \001(\t22\n\nSalutati" +
+                        "on\022$\n\005login\022\013.NomRequest\032\014.NomResponse(\001" +
+                        "2L\n\016Multiplication\022:\n\026getTableMultiplica" +
+                        "tion\022\016.NombreRequest\032\016.TableResponse0\0012;" +
+                        "\n\006Suffle\0221\n\014ShuffleWords\022\r.NamesRequest\032" +
+                        "\016.NamesResponse(\0010\001B\022\n\020emsi.moncef.stubb" +
+                        "\006proto3"
         };
         com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
                 new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -50,26 +64,38 @@ public final class Signin {
                 .internalBuildGeneratedFileFrom(descriptorData,
                         new com.google.protobuf.Descriptors.FileDescriptor[]{
                         }, assigner);
-        internal_static_NomRequest_descriptor =
+        internal_static_NamesRequest_descriptor =
                 getDescriptor().getMessageTypes().get(0);
+        internal_static_NamesRequest_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_NamesRequest_descriptor,
+                new java.lang.String[]{"Nom",});
+        internal_static_NamesResponse_descriptor =
+                getDescriptor().getMessageTypes().get(1);
+        internal_static_NamesResponse_fieldAccessorTable = new
+                com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+                internal_static_NamesResponse_descriptor,
+                new java.lang.String[]{"MsgResponse",});
+        internal_static_NomRequest_descriptor =
+                getDescriptor().getMessageTypes().get(2);
         internal_static_NomRequest_fieldAccessorTable = new
                 com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
                 internal_static_NomRequest_descriptor,
                 new java.lang.String[]{"Nom",});
         internal_static_NomResponse_descriptor =
-                getDescriptor().getMessageTypes().get(1);
+                getDescriptor().getMessageTypes().get(3);
         internal_static_NomResponse_fieldAccessorTable = new
                 com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
                 internal_static_NomResponse_descriptor,
                 new java.lang.String[]{"MsgResponse",});
         internal_static_NombreRequest_descriptor =
-                getDescriptor().getMessageTypes().get(2);
+                getDescriptor().getMessageTypes().get(4);
         internal_static_NombreRequest_fieldAccessorTable = new
                 com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
                 internal_static_NombreRequest_descriptor,
                 new java.lang.String[]{"Nombre", "Limite",});
         internal_static_TableResponse_descriptor =
-                getDescriptor().getMessageTypes().get(3);
+                getDescriptor().getMessageTypes().get(5);
         internal_static_TableResponse_fieldAccessorTable = new
                 com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
                 internal_static_TableResponse_descriptor,
@@ -92,6 +118,36 @@ public final class Signin {
     public static com.google.protobuf.Descriptors.FileDescriptor
     getDescriptor() {
         return descriptor;
+    }
+    public interface NamesRequestOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:NamesRequest)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string nom = 1;</code>
+         */
+        java.lang.String getNom();
+
+        /**
+         * <code>string nom = 1;</code>
+         */
+        com.google.protobuf.ByteString
+        getNomBytes();
+    }
+    public interface NamesResponseOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:NamesResponse)
+            com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string msgResponse = 1;</code>
+         */
+        java.lang.String getMsgResponse();
+
+        /**
+         * <code>string msgResponse = 1;</code>
+         */
+        com.google.protobuf.ByteString
+        getMsgResponseBytes();
     }
     public interface NomRequestOrBuilder extends
             // @@protoc_insertion_point(interface_extends:NomRequest)
@@ -151,6 +207,1148 @@ public final class Signin {
          */
         com.google.protobuf.ByteString
         getResultatBytes();
+    }
+
+    /**
+     * Protobuf type {@code NamesRequest}
+     */
+    public static final class NamesRequest extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:NamesRequest)
+            NamesRequestOrBuilder {
+        public static final int NOM_FIELD_NUMBER = 1;
+        private static final long serialVersionUID = 0L;
+        // @@protoc_insertion_point(class_scope:NamesRequest)
+        private static final emsi.moncef.stub.Signin.NamesRequest DEFAULT_INSTANCE;
+        private static final com.google.protobuf.Parser<NamesRequest>
+                PARSER = new com.google.protobuf.AbstractParser<NamesRequest>() {
+            @java.lang.Override
+            public NamesRequest parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new NamesRequest(input, extensionRegistry);
+            }
+        };
+
+        static {
+            DEFAULT_INSTANCE = new emsi.moncef.stub.Signin.NamesRequest();
+        }
+
+        private volatile java.lang.Object nom_;
+        private byte memoizedIsInitialized = -1;
+
+        // Use NamesRequest.newBuilder() to construct.
+        private NamesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
+        private NamesRequest() {
+            nom_ = "";
+        }
+
+        private NamesRequest(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        case 10: {
+                            java.lang.String s = input.readStringRequireUtf8();
+
+                            nom_ = s;
+                            break;
+                        }
+                        default: {
+                            if (!parseUnknownFieldProto3(
+                                    input, unknownFields, extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+            return emsi.moncef.stub.Signin.internal_static_NamesRequest_descriptor;
+        }
+
+        public static emsi.moncef.stub.Signin.NamesRequest parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesRequest parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesRequest parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesRequest parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesRequest parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesRequest parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesRequest parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesRequest parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesRequest parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesRequest parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesRequest parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesRequest parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(emsi.moncef.stub.Signin.NamesRequest prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesRequest getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        public static com.google.protobuf.Parser<NamesRequest> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return emsi.moncef.stub.Signin.internal_static_NamesRequest_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            emsi.moncef.stub.Signin.NamesRequest.class, emsi.moncef.stub.Signin.NamesRequest.Builder.class);
+        }
+
+        /**
+         * <code>string nom = 1;</code>
+         */
+        public java.lang.String getNom() {
+            java.lang.Object ref = nom_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                nom_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string nom = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+        getNomBytes() {
+            java.lang.Object ref = nom_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                nom_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (!getNomBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nom_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (!getNomBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nom_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof emsi.moncef.stub.Signin.NamesRequest)) {
+                return super.equals(obj);
+            }
+            emsi.moncef.stub.Signin.NamesRequest other = (emsi.moncef.stub.Signin.NamesRequest) obj;
+
+            boolean result = true;
+            result = result && getNom()
+                    .equals(other.getNom());
+            result = result && unknownFields.equals(other.unknownFields);
+            return result;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + NOM_FIELD_NUMBER;
+            hash = (53 * hash) + getNom().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<NamesRequest> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public emsi.moncef.stub.Signin.NamesRequest getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
+        /**
+         * Protobuf type {@code NamesRequest}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:NamesRequest)
+                emsi.moncef.stub.Signin.NamesRequestOrBuilder {
+            private java.lang.Object nom_ = "";
+
+            // Construct using emsi.moncef.stub.Signin.NamesRequest.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return emsi.moncef.stub.Signin.internal_static_NamesRequest_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return emsi.moncef.stub.Signin.internal_static_NamesRequest_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                emsi.moncef.stub.Signin.NamesRequest.class, emsi.moncef.stub.Signin.NamesRequest.Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                nom_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return emsi.moncef.stub.Signin.internal_static_NamesRequest_descriptor;
+            }
+
+            @java.lang.Override
+            public emsi.moncef.stub.Signin.NamesRequest getDefaultInstanceForType() {
+                return emsi.moncef.stub.Signin.NamesRequest.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public emsi.moncef.stub.Signin.NamesRequest build() {
+                emsi.moncef.stub.Signin.NamesRequest result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public emsi.moncef.stub.Signin.NamesRequest buildPartial() {
+                emsi.moncef.stub.Signin.NamesRequest result = new emsi.moncef.stub.Signin.NamesRequest(this);
+                result.nom_ = nom_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return (Builder) super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return (Builder) super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return (Builder) super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return (Builder) super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, java.lang.Object value) {
+                return (Builder) super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return (Builder) super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof emsi.moncef.stub.Signin.NamesRequest) {
+                    return mergeFrom((emsi.moncef.stub.Signin.NamesRequest) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(emsi.moncef.stub.Signin.NamesRequest other) {
+                if (other == emsi.moncef.stub.Signin.NamesRequest.getDefaultInstance()) return this;
+                if (!other.getNom().isEmpty()) {
+                    nom_ = other.nom_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                emsi.moncef.stub.Signin.NamesRequest parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (emsi.moncef.stub.Signin.NamesRequest) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <code>string nom = 1;</code>
+             */
+            public java.lang.String getNom() {
+                java.lang.Object ref = nom_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    nom_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string nom = 1;</code>
+             */
+            public Builder setNom(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                nom_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string nom = 1;</code>
+             */
+            public com.google.protobuf.ByteString
+            getNomBytes() {
+                java.lang.Object ref = nom_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    nom_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string nom = 1;</code>
+             */
+            public Builder setNomBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                nom_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string nom = 1;</code>
+             */
+            public Builder clearNom() {
+
+                nom_ = getDefaultInstance().getNom();
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFieldsProto3(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+
+            // @@protoc_insertion_point(builder_scope:NamesRequest)
+        }
+
+    }
+
+    /**
+     * Protobuf type {@code NamesResponse}
+     */
+    public static final class NamesResponse extends
+            com.google.protobuf.GeneratedMessageV3 implements
+            // @@protoc_insertion_point(message_implements:NamesResponse)
+            NamesResponseOrBuilder {
+        public static final int MSGRESPONSE_FIELD_NUMBER = 1;
+        private static final long serialVersionUID = 0L;
+        // @@protoc_insertion_point(class_scope:NamesResponse)
+        private static final emsi.moncef.stub.Signin.NamesResponse DEFAULT_INSTANCE;
+        private static final com.google.protobuf.Parser<NamesResponse>
+                PARSER = new com.google.protobuf.AbstractParser<NamesResponse>() {
+            @java.lang.Override
+            public NamesResponse parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                return new NamesResponse(input, extensionRegistry);
+            }
+        };
+
+        static {
+            DEFAULT_INSTANCE = new emsi.moncef.stub.Signin.NamesResponse();
+        }
+
+        private volatile java.lang.Object msgResponse_;
+        private byte memoizedIsInitialized = -1;
+
+        // Use NamesResponse.newBuilder() to construct.
+        private NamesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+            super(builder);
+        }
+        private NamesResponse() {
+            msgResponse_ = "";
+        }
+
+        private NamesResponse(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            this();
+            if (extensionRegistry == null) {
+                throw new java.lang.NullPointerException();
+            }
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+                boolean done = false;
+                while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                        case 0:
+                            done = true;
+                            break;
+                        case 10: {
+                            java.lang.String s = input.readStringRequireUtf8();
+
+                            msgResponse_ = s;
+                            break;
+                        }
+                        default: {
+                            if (!parseUnknownFieldProto3(
+                                    input, unknownFields, extensionRegistry, tag)) {
+                                done = true;
+                            }
+                            break;
+                        }
+                    }
+                }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                        e).setUnfinishedMessage(this);
+            } finally {
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+            }
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+            return emsi.moncef.stub.Signin.internal_static_NamesResponse_descriptor;
+        }
+
+        public static emsi.moncef.stub.Signin.NamesResponse parseFrom(
+                java.nio.ByteBuffer data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesResponse parseFrom(
+                java.nio.ByteBuffer data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesResponse parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesResponse parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesResponse parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesResponse parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesResponse parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesResponse parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesResponse parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesResponse parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesResponse parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesResponse parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+            return com.google.protobuf.GeneratedMessageV3
+                    .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() {
+            return DEFAULT_INSTANCE.toBuilder();
+        }
+
+        public static Builder newBuilder(emsi.moncef.stub.Signin.NamesResponse prototype) {
+            return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+
+        public static emsi.moncef.stub.Signin.NamesResponse getDefaultInstance() {
+            return DEFAULT_INSTANCE;
+        }
+
+        public static com.google.protobuf.Parser<NamesResponse> parser() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+            return this.unknownFields;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+            return emsi.moncef.stub.Signin.internal_static_NamesResponse_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                            emsi.moncef.stub.Signin.NamesResponse.class, emsi.moncef.stub.Signin.NamesResponse.Builder.class);
+        }
+
+        /**
+         * <code>string msgResponse = 1;</code>
+         */
+        public java.lang.String getMsgResponse() {
+            java.lang.Object ref = msgResponse_;
+            if (ref instanceof java.lang.String) {
+                return (java.lang.String) ref;
+            } else {
+                com.google.protobuf.ByteString bs =
+                        (com.google.protobuf.ByteString) ref;
+                java.lang.String s = bs.toStringUtf8();
+                msgResponse_ = s;
+                return s;
+            }
+        }
+
+        /**
+         * <code>string msgResponse = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+        getMsgResponseBytes() {
+            java.lang.Object ref = msgResponse_;
+            if (ref instanceof java.lang.String) {
+                com.google.protobuf.ByteString b =
+                        com.google.protobuf.ByteString.copyFromUtf8(
+                                (java.lang.String) ref);
+                msgResponse_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                throws java.io.IOException {
+            if (!getMsgResponseBytes().isEmpty()) {
+                com.google.protobuf.GeneratedMessageV3.writeString(output, 1, msgResponse_);
+            }
+            unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+            int size = memoizedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (!getMsgResponseBytes().isEmpty()) {
+                size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, msgResponse_);
+            }
+            size += unknownFields.getSerializedSize();
+            memoizedSize = size;
+            return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+            if (obj == this) {
+                return true;
+            }
+            if (!(obj instanceof emsi.moncef.stub.Signin.NamesResponse)) {
+                return super.equals(obj);
+            }
+            emsi.moncef.stub.Signin.NamesResponse other = (emsi.moncef.stub.Signin.NamesResponse) obj;
+
+            boolean result = true;
+            result = result && getMsgResponse()
+                    .equals(other.getMsgResponse());
+            result = result && unknownFields.equals(other.unknownFields);
+            return result;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+            if (memoizedHashCode != 0) {
+                return memoizedHashCode;
+            }
+            int hash = 41;
+            hash = (19 * hash) + getDescriptor().hashCode();
+            hash = (37 * hash) + MSGRESPONSE_FIELD_NUMBER;
+            hash = (53 * hash) + getMsgResponse().hashCode();
+            hash = (29 * hash) + unknownFields.hashCode();
+            memoizedHashCode = hash;
+            return hash;
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        @java.lang.Override
+        public Builder toBuilder() {
+            return this == DEFAULT_INSTANCE
+                    ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<NamesResponse> getParserForType() {
+            return PARSER;
+        }
+
+        @java.lang.Override
+        public emsi.moncef.stub.Signin.NamesResponse getDefaultInstanceForType() {
+            return DEFAULT_INSTANCE;
+        }
+
+        /**
+         * Protobuf type {@code NamesResponse}
+         */
+        public static final class Builder extends
+                com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:NamesResponse)
+                emsi.moncef.stub.Signin.NamesResponseOrBuilder {
+            private java.lang.Object msgResponse_ = "";
+
+            // Construct using emsi.moncef.stub.Signin.NamesResponse.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                    com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+                return emsi.moncef.stub.Signin.internal_static_NamesResponse_descriptor;
+            }
+
+            @java.lang.Override
+            protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+                return emsi.moncef.stub.Signin.internal_static_NamesResponse_fieldAccessorTable
+                        .ensureFieldAccessorsInitialized(
+                                emsi.moncef.stub.Signin.NamesResponse.class, emsi.moncef.stub.Signin.NamesResponse.Builder.class);
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessageV3
+                        .alwaysUseFieldBuilders) {
+                }
+            }
+
+            @java.lang.Override
+            public Builder clear() {
+                super.clear();
+                msgResponse_ = "";
+
+                return this;
+            }
+
+            @java.lang.Override
+            public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+                return emsi.moncef.stub.Signin.internal_static_NamesResponse_descriptor;
+            }
+
+            @java.lang.Override
+            public emsi.moncef.stub.Signin.NamesResponse getDefaultInstanceForType() {
+                return emsi.moncef.stub.Signin.NamesResponse.getDefaultInstance();
+            }
+
+            @java.lang.Override
+            public emsi.moncef.stub.Signin.NamesResponse build() {
+                emsi.moncef.stub.Signin.NamesResponse result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            @java.lang.Override
+            public emsi.moncef.stub.Signin.NamesResponse buildPartial() {
+                emsi.moncef.stub.Signin.NamesResponse result = new emsi.moncef.stub.Signin.NamesResponse(this);
+                result.msgResponse_ = msgResponse_;
+                onBuilt();
+                return result;
+            }
+
+            @java.lang.Override
+            public Builder clone() {
+                return (Builder) super.clone();
+            }
+
+            @java.lang.Override
+            public Builder setField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return (Builder) super.setField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder clearField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field) {
+                return (Builder) super.clearField(field);
+            }
+
+            @java.lang.Override
+            public Builder clearOneof(
+                    com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+                return (Builder) super.clearOneof(oneof);
+            }
+
+            @java.lang.Override
+            public Builder setRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    int index, java.lang.Object value) {
+                return (Builder) super.setRepeatedField(field, index, value);
+            }
+
+            @java.lang.Override
+            public Builder addRepeatedField(
+                    com.google.protobuf.Descriptors.FieldDescriptor field,
+                    java.lang.Object value) {
+                return (Builder) super.addRepeatedField(field, value);
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof emsi.moncef.stub.Signin.NamesResponse) {
+                    return mergeFrom((emsi.moncef.stub.Signin.NamesResponse) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(emsi.moncef.stub.Signin.NamesResponse other) {
+                if (other == emsi.moncef.stub.Signin.NamesResponse.getDefaultInstance()) return this;
+                if (!other.getMsgResponse().isEmpty()) {
+                    msgResponse_ = other.msgResponse_;
+                    onChanged();
+                }
+                this.mergeUnknownFields(other.unknownFields);
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            @java.lang.Override
+            public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                emsi.moncef.stub.Signin.NamesResponse parsedMessage = null;
+                try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (emsi.moncef.stub.Signin.NamesResponse) e.getUnfinishedMessage();
+                    throw e.unwrapIOException();
+                } finally {
+                    if (parsedMessage != null) {
+                        mergeFrom(parsedMessage);
+                    }
+                }
+                return this;
+            }
+
+            /**
+             * <code>string msgResponse = 1;</code>
+             */
+            public java.lang.String getMsgResponse() {
+                java.lang.Object ref = msgResponse_;
+                if (!(ref instanceof java.lang.String)) {
+                    com.google.protobuf.ByteString bs =
+                            (com.google.protobuf.ByteString) ref;
+                    java.lang.String s = bs.toStringUtf8();
+                    msgResponse_ = s;
+                    return s;
+                } else {
+                    return (java.lang.String) ref;
+                }
+            }
+
+            /**
+             * <code>string msgResponse = 1;</code>
+             */
+            public Builder setMsgResponse(
+                    java.lang.String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+
+                msgResponse_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string msgResponse = 1;</code>
+             */
+            public com.google.protobuf.ByteString
+            getMsgResponseBytes() {
+                java.lang.Object ref = msgResponse_;
+                if (ref instanceof String) {
+                    com.google.protobuf.ByteString b =
+                            com.google.protobuf.ByteString.copyFromUtf8(
+                                    (java.lang.String) ref);
+                    msgResponse_ = b;
+                    return b;
+                } else {
+                    return (com.google.protobuf.ByteString) ref;
+                }
+            }
+
+            /**
+             * <code>string msgResponse = 1;</code>
+             */
+            public Builder setMsgResponseBytes(
+                    com.google.protobuf.ByteString value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                checkByteStringIsUtf8(value);
+
+                msgResponse_ = value;
+                onChanged();
+                return this;
+            }
+
+            /**
+             * <code>string msgResponse = 1;</code>
+             */
+            public Builder clearMsgResponse() {
+
+                msgResponse_ = getDefaultInstance().getMsgResponse();
+                onChanged();
+                return this;
+            }
+
+            @java.lang.Override
+            public final Builder setUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.setUnknownFieldsProto3(unknownFields);
+            }
+
+            @java.lang.Override
+            public final Builder mergeUnknownFields(
+                    final com.google.protobuf.UnknownFieldSet unknownFields) {
+                return super.mergeUnknownFields(unknownFields);
+            }
+
+
+            // @@protoc_insertion_point(builder_scope:NamesResponse)
+        }
+
     }
 
     /**

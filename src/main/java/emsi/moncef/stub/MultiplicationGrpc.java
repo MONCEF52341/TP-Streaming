@@ -1,19 +1,5 @@
 package emsi.moncef.stub;
 
-import com.google.protobuf.Descriptors;
-import io.grpc.*;
-import io.grpc.protobuf.ProtoFileDescriptorSupplier;
-import io.grpc.protobuf.ProtoMethodDescriptorSupplier;
-import io.grpc.protobuf.ProtoServiceDescriptorSupplier;
-import io.grpc.protobuf.ProtoUtils;
-import io.grpc.stub.AbstractStub;
-import io.grpc.stub.ServerCalls;
-import io.grpc.stub.StreamObserver;
-import io.grpc.stub.annotations.RpcMethod;
-
-import javax.annotation.Generated;
-import java.util.Iterator;
-
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
@@ -23,7 +9,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  *
  */
-@Generated(
+@javax.annotation.Generated(
         value = "by gRPC proto compiler (version 1.15.0)",
         comments = "Source: signin.proto")
 public final class MultiplicationGrpc {
@@ -31,34 +17,34 @@ public final class MultiplicationGrpc {
     public static final String SERVICE_NAME = "Multiplication";
     private static final int METHODID_GET_TABLE_MULTIPLICATION = 0;
     // Static method descriptors that strictly reflect the proto.
-    private static volatile MethodDescriptor<Signin.NombreRequest,
-            Signin.TableResponse> getGetTableMultiplicationMethod;
-    private static volatile ServiceDescriptor serviceDescriptor;
+    private static volatile io.grpc.MethodDescriptor<emsi.moncef.stub.Signin.NombreRequest,
+            emsi.moncef.stub.Signin.TableResponse> getGetTableMultiplicationMethod;
+    private static volatile io.grpc.ServiceDescriptor serviceDescriptor;
 
     private MultiplicationGrpc() {
     }
 
-    @RpcMethod(
+    @io.grpc.stub.annotations.RpcMethod(
             fullMethodName = SERVICE_NAME + '/' + "getTableMultiplication",
-            requestType = Signin.NombreRequest.class,
-            responseType = Signin.TableResponse.class,
-            methodType = MethodDescriptor.MethodType.SERVER_STREAMING)
-    public static MethodDescriptor<Signin.NombreRequest,
-            Signin.TableResponse> getGetTableMultiplicationMethod() {
-        MethodDescriptor<Signin.NombreRequest, Signin.TableResponse> getGetTableMultiplicationMethod;
+            requestType = emsi.moncef.stub.Signin.NombreRequest.class,
+            responseType = emsi.moncef.stub.Signin.TableResponse.class,
+            methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+    public static io.grpc.MethodDescriptor<emsi.moncef.stub.Signin.NombreRequest,
+            emsi.moncef.stub.Signin.TableResponse> getGetTableMultiplicationMethod() {
+        io.grpc.MethodDescriptor<emsi.moncef.stub.Signin.NombreRequest, emsi.moncef.stub.Signin.TableResponse> getGetTableMultiplicationMethod;
         if ((getGetTableMultiplicationMethod = MultiplicationGrpc.getGetTableMultiplicationMethod) == null) {
             synchronized (MultiplicationGrpc.class) {
                 if ((getGetTableMultiplicationMethod = MultiplicationGrpc.getGetTableMultiplicationMethod) == null) {
                     MultiplicationGrpc.getGetTableMultiplicationMethod = getGetTableMultiplicationMethod =
-                            MethodDescriptor.<Signin.NombreRequest, Signin.TableResponse>newBuilder()
-                                    .setType(MethodDescriptor.MethodType.SERVER_STREAMING)
+                            io.grpc.MethodDescriptor.<emsi.moncef.stub.Signin.NombreRequest, emsi.moncef.stub.Signin.TableResponse>newBuilder()
+                                    .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
                                     .setFullMethodName(generateFullMethodName(
                                             "Multiplication", "getTableMultiplication"))
                                     .setSampledToLocalTracing(true)
-                                    .setRequestMarshaller(ProtoUtils.marshaller(
-                                            Signin.NombreRequest.getDefaultInstance()))
-                                    .setResponseMarshaller(ProtoUtils.marshaller(
-                                            Signin.TableResponse.getDefaultInstance()))
+                                    .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                            emsi.moncef.stub.Signin.NombreRequest.getDefaultInstance()))
+                                    .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                            emsi.moncef.stub.Signin.TableResponse.getDefaultInstance()))
                                     .setSchemaDescriptor(new MultiplicationMethodDescriptorSupplier("getTableMultiplication"))
                                     .build();
                 }
@@ -70,7 +56,7 @@ public final class MultiplicationGrpc {
     /**
      * Creates a new async stub that supports all call types for the service
      */
-    public static MultiplicationStub newStub(Channel channel) {
+    public static MultiplicationStub newStub(io.grpc.Channel channel) {
         return new MultiplicationStub(channel);
     }
 
@@ -78,7 +64,7 @@ public final class MultiplicationGrpc {
      * Creates a new blocking-style stub that supports unary and streaming output calls on the service
      */
     public static MultiplicationBlockingStub newBlockingStub(
-            Channel channel) {
+            io.grpc.Channel channel) {
         return new MultiplicationBlockingStub(channel);
     }
 
@@ -86,17 +72,17 @@ public final class MultiplicationGrpc {
      * Creates a new ListenableFuture-style stub that supports unary calls on the service
      */
     public static MultiplicationFutureStub newFutureStub(
-            Channel channel) {
+            io.grpc.Channel channel) {
         return new MultiplicationFutureStub(channel);
     }
 
-    public static ServiceDescriptor getServiceDescriptor() {
-        ServiceDescriptor result = serviceDescriptor;
+    public static io.grpc.ServiceDescriptor getServiceDescriptor() {
+        io.grpc.ServiceDescriptor result = serviceDescriptor;
         if (result == null) {
             synchronized (MultiplicationGrpc.class) {
                 result = serviceDescriptor;
                 if (result == null) {
-                    serviceDescriptor = result = ServiceDescriptor.newBuilder(SERVICE_NAME)
+                    serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
                             .setSchemaDescriptor(new MultiplicationFileDescriptorSupplier())
                             .addMethod(getGetTableMultiplicationMethod())
                             .build();
@@ -109,26 +95,25 @@ public final class MultiplicationGrpc {
     /**
      *
      */
-    public static abstract class MultiplicationImplBase implements BindableService {
+    public static abstract class MultiplicationImplBase implements io.grpc.BindableService {
 
         /**
          *
          */
-
-        public void getTableMultiplication(Signin.NombreRequest request,
-                                           StreamObserver<Signin.TableResponse> responseObserver) {
+        public void getTableMultiplication(emsi.moncef.stub.Signin.NombreRequest request,
+                                           io.grpc.stub.StreamObserver<emsi.moncef.stub.Signin.TableResponse> responseObserver) {
             asyncUnimplementedUnaryCall(getGetTableMultiplicationMethod(), responseObserver);
         }
 
-        @Override
-        public final ServerServiceDefinition bindService() {
-            return ServerServiceDefinition.builder(getServiceDescriptor())
+        @java.lang.Override
+        public final io.grpc.ServerServiceDefinition bindService() {
+            return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
                     .addMethod(
                             getGetTableMultiplicationMethod(),
                             asyncServerStreamingCall(
                                     new MethodHandlers<
-                                            Signin.NombreRequest,
-                                            Signin.TableResponse>(
+                                            emsi.moncef.stub.Signin.NombreRequest,
+                                            emsi.moncef.stub.Signin.TableResponse>(
                                             this, METHODID_GET_TABLE_MULTIPLICATION)))
                     .build();
         }
@@ -137,27 +122,27 @@ public final class MultiplicationGrpc {
     /**
      *
      */
-    public static final class MultiplicationStub extends AbstractStub<MultiplicationStub> {
-        private MultiplicationStub(Channel channel) {
+    public static final class MultiplicationStub extends io.grpc.stub.AbstractStub<MultiplicationStub> {
+        private MultiplicationStub(io.grpc.Channel channel) {
             super(channel);
         }
 
-        private MultiplicationStub(Channel channel,
-                                   CallOptions callOptions) {
+        private MultiplicationStub(io.grpc.Channel channel,
+                                   io.grpc.CallOptions callOptions) {
             super(channel, callOptions);
         }
 
-        @Override
-        protected MultiplicationStub build(Channel channel,
-                                           CallOptions callOptions) {
+        @java.lang.Override
+        protected MultiplicationStub build(io.grpc.Channel channel,
+                                           io.grpc.CallOptions callOptions) {
             return new MultiplicationStub(channel, callOptions);
         }
 
         /**
          *
          */
-        public void getTableMultiplication(Signin.NombreRequest request,
-                                           StreamObserver<Signin.TableResponse> responseObserver) {
+        public void getTableMultiplication(emsi.moncef.stub.Signin.NombreRequest request,
+                                           io.grpc.stub.StreamObserver<emsi.moncef.stub.Signin.TableResponse> responseObserver) {
             asyncServerStreamingCall(
                     getChannel().newCall(getGetTableMultiplicationMethod(), getCallOptions()), request, responseObserver);
         }
@@ -166,27 +151,27 @@ public final class MultiplicationGrpc {
     /**
      *
      */
-    public static final class MultiplicationBlockingStub extends AbstractStub<MultiplicationBlockingStub> {
-        private MultiplicationBlockingStub(Channel channel) {
+    public static final class MultiplicationBlockingStub extends io.grpc.stub.AbstractStub<MultiplicationBlockingStub> {
+        private MultiplicationBlockingStub(io.grpc.Channel channel) {
             super(channel);
         }
 
-        private MultiplicationBlockingStub(Channel channel,
-                                           CallOptions callOptions) {
+        private MultiplicationBlockingStub(io.grpc.Channel channel,
+                                           io.grpc.CallOptions callOptions) {
             super(channel, callOptions);
         }
 
-        @Override
-        protected MultiplicationBlockingStub build(Channel channel,
-                                                   CallOptions callOptions) {
+        @java.lang.Override
+        protected MultiplicationBlockingStub build(io.grpc.Channel channel,
+                                                   io.grpc.CallOptions callOptions) {
             return new MultiplicationBlockingStub(channel, callOptions);
         }
 
         /**
          *
          */
-        public Iterator<Signin.TableResponse> getTableMultiplication(
-                Signin.NombreRequest request) {
+        public java.util.Iterator<emsi.moncef.stub.Signin.TableResponse> getTableMultiplication(
+                emsi.moncef.stub.Signin.NombreRequest request) {
             return blockingServerStreamingCall(
                     getChannel(), getGetTableMultiplicationMethod(), getCallOptions(), request);
         }
@@ -195,28 +180,28 @@ public final class MultiplicationGrpc {
     /**
      *
      */
-    public static final class MultiplicationFutureStub extends AbstractStub<MultiplicationFutureStub> {
-        private MultiplicationFutureStub(Channel channel) {
+    public static final class MultiplicationFutureStub extends io.grpc.stub.AbstractStub<MultiplicationFutureStub> {
+        private MultiplicationFutureStub(io.grpc.Channel channel) {
             super(channel);
         }
 
-        private MultiplicationFutureStub(Channel channel,
-                                         CallOptions callOptions) {
+        private MultiplicationFutureStub(io.grpc.Channel channel,
+                                         io.grpc.CallOptions callOptions) {
             super(channel, callOptions);
         }
 
-        @Override
-        protected MultiplicationFutureStub build(Channel channel,
-                                                 CallOptions callOptions) {
+        @java.lang.Override
+        protected MultiplicationFutureStub build(io.grpc.Channel channel,
+                                                 io.grpc.CallOptions callOptions) {
             return new MultiplicationFutureStub(channel, callOptions);
         }
     }
 
     private static final class MethodHandlers<Req, Resp> implements
-            ServerCalls.UnaryMethod<Req, Resp>,
-            ServerCalls.ServerStreamingMethod<Req, Resp>,
-            ServerCalls.ClientStreamingMethod<Req, Resp>,
-            ServerCalls.BidiStreamingMethod<Req, Resp> {
+            io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
+            io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
+            io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
+            io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
         private final MultiplicationImplBase serviceImpl;
         private final int methodId;
 
@@ -225,23 +210,23 @@ public final class MultiplicationGrpc {
             this.methodId = methodId;
         }
 
-        @Override
-        @SuppressWarnings("unchecked")
-        public void invoke(Req request, StreamObserver<Resp> responseObserver) {
+        @java.lang.Override
+        @java.lang.SuppressWarnings("unchecked")
+        public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
             switch (methodId) {
                 case METHODID_GET_TABLE_MULTIPLICATION:
-                    serviceImpl.getTableMultiplication((Signin.NombreRequest) request,
-                            (StreamObserver<Signin.TableResponse>) responseObserver);
+                    serviceImpl.getTableMultiplication((emsi.moncef.stub.Signin.NombreRequest) request,
+                            (io.grpc.stub.StreamObserver<emsi.moncef.stub.Signin.TableResponse>) responseObserver);
                     break;
                 default:
                     throw new AssertionError();
             }
         }
 
-        @Override
-        @SuppressWarnings("unchecked")
-        public StreamObserver<Req> invoke(
-                StreamObserver<Resp> responseObserver) {
+        @java.lang.Override
+        @java.lang.SuppressWarnings("unchecked")
+        public io.grpc.stub.StreamObserver<Req> invoke(
+                io.grpc.stub.StreamObserver<Resp> responseObserver) {
             switch (methodId) {
                 default:
                     throw new AssertionError();
@@ -250,17 +235,17 @@ public final class MultiplicationGrpc {
     }
 
     private static abstract class MultiplicationBaseDescriptorSupplier
-            implements ProtoFileDescriptorSupplier, ProtoServiceDescriptorSupplier {
+            implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
         MultiplicationBaseDescriptorSupplier() {
         }
 
-        @Override
-        public Descriptors.FileDescriptor getFileDescriptor() {
-            return Signin.getDescriptor();
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
+            return emsi.moncef.stub.Signin.getDescriptor();
         }
 
-        @Override
-        public Descriptors.ServiceDescriptor getServiceDescriptor() {
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
             return getFileDescriptor().findServiceByName("Multiplication");
         }
     }
@@ -273,15 +258,15 @@ public final class MultiplicationGrpc {
 
     private static final class MultiplicationMethodDescriptorSupplier
             extends MultiplicationBaseDescriptorSupplier
-            implements ProtoMethodDescriptorSupplier {
+            implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
         private final String methodName;
 
         MultiplicationMethodDescriptorSupplier(String methodName) {
             this.methodName = methodName;
         }
 
-        @Override
-        public Descriptors.MethodDescriptor getMethodDescriptor() {
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
             return getServiceDescriptor().findMethodByName(methodName);
         }
     }
