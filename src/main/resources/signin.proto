@@ -1,7 +1,11 @@
 syntax ="proto3";
-option java_package = "emsi.moncef";
+option java_package = "emsi.moncef.stub";
 service Salutation{
   rpc login(stream NomRequest) returns (NomResponse);
+}
+
+service Multiplication{
+  rpc getTableMultiplication(NombreRequest) returns (stream TableResponse);
 }
 
 message NomRequest{
@@ -9,4 +13,13 @@ message NomRequest{
 }
 message NomResponse{
   string msgResponse=1;
+}
+
+message NombreRequest{
+  int32 nombre=1;
+  int32 limite=2;
+}
+
+message TableResponse{
+  string Resultat=1;
 }
